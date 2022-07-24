@@ -1,4 +1,5 @@
 
+
 # Image Service App
 The application was developed as part of selection process for [Anwalt](https://www.anwalt.de/). The functionality that this application covers are resizing and cropping image which is present on the server.
 ### # Prerequisites
@@ -60,3 +61,12 @@ Example: http://localhost:8756/?type=crop&x=20&y=200&width=200&height=400
  - height
  
 Example: http://localhost:8756/?type=resize&width=200&height=400
+### # Tests
+You can run test by executing:
+
+    # run tests inside docker
+    make test
+or
+
+    # run test locally
+    make test-local

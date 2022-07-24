@@ -7,5 +7,6 @@ build:
 	docker-compose up -d
 	docker-compose exec --user "$(shell id --user):$(shell id --group)" imageservice sh -c "composer install"
 test:
+	docker-compose exec --user "$(shell id --user):$(shell id --group)" imageservice sh -c "php ./vendor/bin/phpunit /var/www/html/image/tests"
+test-local:
 	php ./vendor/bin/phpunit tests/
-	docker-compose exec imageservice sh -c "php ./vendor/bin/phpunit /var/www/html/image/tests"
