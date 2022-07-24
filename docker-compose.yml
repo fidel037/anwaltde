@@ -2,6 +2,7 @@ version: "3.7"
 services:
   imageservice:
     build: ./
+    user: "${UID}:${GID}"
     ports:
       - "8756:8000"
     expose:
