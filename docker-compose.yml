@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  imageservice:
+    build: ./
+    ports:
+      - "8756:8000"
+    expose:
+      - "8756"
+    volumes:
+      - ./:/var/www/html/image
+    command: /bin/sh /var/www/html/image/start.sh
